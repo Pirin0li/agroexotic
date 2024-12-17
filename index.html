@@ -13,6 +13,7 @@
             padding: 0;
             color: #333;
             line-height: 1.6;
+            background-color: #f4f4f9;
         }
         header {
             background-color: #004080;
@@ -38,6 +39,7 @@
             color: #fff;
             padding: 4rem 2rem;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .hero h1 {
             margin: 0;
@@ -54,7 +56,7 @@
             justify-content: space-around;
         }
         .feature-card {
-            background-color: #f9f9f9;
+            background-color: #fff;
             padding: 1.5rem;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -62,6 +64,10 @@
             flex: 1 1 calc(30% - 2rem);
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
         }
         .cta {
             text-align: center;
@@ -75,6 +81,7 @@
             border-radius: 5px;
             font-size: 1rem;
             cursor: pointer;
+            transition: background 0.3s ease;
         }
         .cta button:hover {
             background-color: #004080;
@@ -85,14 +92,15 @@
             text-align: center;
             padding: 1rem 0;
         }
-        .meme {
+        .meme, .image-gallery {
             text-align: center;
             margin: 2rem 0;
         }
-        .meme img {
+        .meme img, .image-gallery img {
             max-width: 300px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 10px;
         }
         .section-title {
             text-align: center;
@@ -111,64 +119,63 @@
 
     <!-- Barra de navegación -->
     <nav>
-        <a href="#resumen">Resumen Ejecutivo</a>
+        <a href="#resumen">Resumen</a>
         <a href="#historia">Historia</a>
         <a href="#vision">Visión</a>
-        <a href="#mision">Misión</a>
-        <a href="#valores">Valores</a>
-        <a href="#memes">Memes</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#contacto">Contacto</a>
     </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <h1>Potencia tu Gestión Agrícola</h1>
+        <p>Soluciones financieras modernas para una agricultura inteligente</p>
+    </section>
 
     <!-- Resumen Ejecutivo -->
     <section id="resumen" class="container">
         <h2 class="section-title">Resumen Ejecutivo</h2>
-        <p>AGROEXO es una empresa especializada en el desarrollo de software de análisis financiero y gestión de producción agrícola, diseñada para apoyar a las organizaciones en la era de la Agricultura 4.0. Utilizamos tecnologías avanzadas como el análisis de big data, inteligencia artificial (IA) y redes de sensores IoT para ofrecer resúmenes financieros anuales precisos que permiten una evaluación completa del rendimiento operativo y económico. Nuestro software proporciona a las empresas agrícolas una ventaja competitiva al facilitar decisiones basadas en datos optimizados para maximizar la rentabilidad y la sostenibilidad.</p>
+        <p>Optimiza tu producción y finanzas con AGROEXO. Nuestra plataforma analiza datos en tiempo real y te proporciona información financiera para maximizar tu rentabilidad y sostenibilidad.</p>
     </section>
 
-    <!-- Historia -->
-    <section id="historia" class="container">
-        <h2 class="section-title">Historia</h2>
-        <p>Fundada en 202X, AGROEXO surgió como respuesta a la necesidad de digitalizar y modernizar la gestión financiera y de producción agrícola. Con un equipo multidisciplinario compuesto por Ingenieros en Agronegocios, comenzamos desarrollando soluciones personalizadas para monitoreo de campo y análisis de costos. A medida que la Agricultura 4.0 se consolidaba como una tendencia clave, expandimos nuestra tecnología para integrar la automatización de reportes financieros con capacidades predictivas, ayudando a nuestros clientes a optimizar sus recursos y operaciones.</p>
-    </section>
-
-    <!-- Visión -->
-    <section id="vision" class="container">
-        <h2 class="section-title">Visión</h2>
-        <p>Ser el referente global en soluciones tecnológicas avanzadas que transformen la gestión agrícola mediante el uso de inteligencia de datos, permitiendo a las empresas agrícolas alcanzar su máximo potencial de productividad y sostenibilidad financiera.</p>
-    </section>
-
-    <!-- Misión -->
-    <section id="mision" class="container">
-        <h2 class="section-title">Misión</h2>
-        <p>Desarrollar e implementar software que integre datos operacionales y financieros de manera inteligente, permitiendo a las empresas agrícolas operar de forma más eficiente y rentable. Nuestra misión es proporcionar análisis precisos y herramientas predictivas que transformen datos en información estratégica, facilitando decisiones empresariales optimizadas.</p>
-    </section>
-
-    <!-- Valores -->
-    <section id="valores" class="container">
-        <h2 class="section-title">Valores</h2>
-        <ul>
-            <li><strong>Precisión y fiabilidad:</strong> Nos enfocamos en garantizar que cada cálculo financiero y métrica operativa sea preciso y verificado.</li>
-            <li><strong>Innovación tecnológica:</strong> Invertimos constantemente en tecnologías emergentes para mantenernos a la vanguardia de la Agricultura 4.0.</li>
-            <li><strong>Sostenibilidad:</strong> Creemos en soluciones que equilibran la producción agrícola eficiente y la conservación de recursos.</li>
-            <li><strong>Seguridad de datos:</strong> Protegemos la privacidad y seguridad de los datos de nuestros clientes.</li>
-        </ul>
-    </section>
-
-    <!-- Memes Graciosos -->
-    <section id="memes" class="container">
-        <h2 class="section-title">Memes Graciosos</h2>
-        <div class="meme">
-            <img src="https://i.imgflip.com/1bij.jpg" alt="Meme 1">
-            <p>"Cuando usas AGROEXO y todo empieza a cuadrar."</p>
-        </div>
-        <div class="meme">
-            <img src="https://i.imgflip.com/30b1gx.jpg" alt="Meme 2">
-            <p>"Mi cara cuando el software predice todo perfecto."</p>
+    <!-- Funciones -->
+    <section id="funciones" class="container">
+        <h2 class="section-title">Características Principales</h2>
+        <div class="feature">
+            <div class="feature-card">
+                <h3>Automatización Financiera</h3>
+                <p>Genera reportes financieros detallados automáticamente y simplifica tu flujo de trabajo.</p>
+                <img src="https://via.placeholder.com/150" alt="Automatización">
+            </div>
+            <div class="feature-card">
+                <h3>Análisis Predictivo</h3>
+                <p>Anticipa resultados financieros con inteligencia artificial avanzada.</p>
+                <img src="https://via.placeholder.com/150" alt="Análisis Predictivo">
+            </div>
+            <div class="feature-card">
+                <h3>Integración IoT</h3>
+                <p>Conecta tus dispositivos para un monitoreo eficiente en tiempo real.</p>
+                <img src="https://via.placeholder.com/150" alt="IoT">
+            </div>
         </div>
     </section>
 
-    <!-- Pie de página -->
-    <footer>
+    <!-- Galería de Imágenes -->
+    <section class="image-gallery container">
+        <h2 class="section-title">Visualiza AGROEXO en Acción</h2>
+        <img src="https://via.placeholder.com/300" alt="Dashboard 1">
+        <img src="https://via.placeholder.com/300" alt="Dashboard 2">
+        <img src="https://via.placeholder.com/300" alt="Análisis">
+    </section>
+
+    <!-- Llamado a la acción -->
+    <section class="cta">
+        <h2>Comienza hoy mismo</h2>
+        <button>Solicita una Demo Gratis</button>
+    </section>
+
+    <!-- Contacto -->
+    <footer id="contacto">
         <p>&copy; 2024 AGROEXO. Todos los derechos reservados.</p>
         <p>Contacto: info@agroexo.com | Tel: +52 55 1234 5678</p>
     </footer>
