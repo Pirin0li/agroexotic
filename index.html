@@ -4,178 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGROEXO - Software Financiero</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
             line-height: 1.6;
-            background-color: #f4f4f9;
+            background-color: #f8f9fa;
         }
         header {
-            background-color: #004080;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             padding: 1rem;
             text-align: center;
+            font-size: 1.2rem;
         }
         nav {
             display: flex;
             justify-content: center;
-            background-color: #0066cc;
+            background-color: #34495e;
         }
         nav a {
-            color: #fff;
+            color: #ecf0f1;
             padding: 1rem;
             text-decoration: none;
+            transition: background 0.3s;
         }
         nav a:hover {
-            background-color: #004080;
+            background-color: #2c3e50;
         }
         .hero {
-            background: url('banner-finanzas.jpg') no-repeat center center/cover;
-            color: #fff;
+            background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover;
+            color: #ecf0f1;
             padding: 4rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background-attachment: fixed;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
         }
-        .hero h1 {
+        .hero h1, .hero p {
             margin: 0;
-            font-size: 2.5rem;
         }
         .container {
             padding: 2rem;
             max-width: 1200px;
             margin: auto;
         }
-        .feature {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: #2c3e50;
+            font-size: 2rem;
+            font-weight: bold;
         }
         .feature-card {
-            background-color: #fff;
+            background-color: #ecf0f1;
             padding: 1.5rem;
-            border: 1px solid #ddd;
+            border: 1px solid #bdc3c7;
             border-radius: 8px;
             margin: 1rem;
             flex: 1 1 calc(30% - 2rem);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         .feature-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.2);
         }
-        .cta {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .cta button {
-            background-color: #0066cc;
-            color: #fff;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .cta button:hover {
-            background-color: #004080;
+        .image-gallery img, .meme img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         footer {
-            background-color: #004080;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
             padding: 1rem 0;
-        }
-        .meme, .image-gallery {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        .meme img, .image-gallery img {
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            margin: 10px;
-        }
-        .section-title {
-            text-align: center;
-            margin-top: 2rem;
-            color: #004080;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <!-- Encabezado -->
     <header>
-        <img src="Captura de pantalla 2024-12-16 223411.jpg" alt="AGROEXO Logo" style="max-width: 200px;">
+        <img src="Captura de pantalla 2024-12-16 223411.jpg" alt="AGROEXO Logo" style="max-width: 150px;">
         <h1>AGROEXO</h1>
         <p>Software Financiero y Gestión Agrícola</p>
     </header>
 
     <!-- Barra de navegación -->
     <nav>
-        <a href="#resumen">Resumen</a>
-        <a href="#historia">Historia</a>
         <a href="#vision">Visión</a>
-        <a href="#funciones">Funciones</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#mision">Misión</a>
+        <a href="#historia">Historia</a>
+        <a href="#galeria">Galería</a>
+        <a href="#memes">Memes</a>
     </nav>
 
-    <!-- Sección Hero -->
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Potencia tu Gestión Agrícola</h1>
-        <p>Soluciones financieras modernas para una agricultura inteligente</p>
+        <h1>Transforma tu Gestión Agrícola</h1>
+        <p>Optimización Financiera e Inteligencia de Datos para la Agricultura</p>
     </section>
 
-    <!-- Resumen Ejecutivo -->
-    <section id="resumen" class="container">
-        <h2 class="section-title">Resumen Ejecutivo</h2>
-        <p>Optimiza tu producción y finanzas con AGROEXO. Nuestra plataforma analiza datos en tiempo real y te proporciona información financiera para maximizar tu rentabilidad y sostenibilidad.</p>
+    <!-- Visión -->
+    <section id="vision" class="container">
+        <h2 class="section-title">Nuestra Visión</h2>
+        <p>Ser el referente global en soluciones tecnológicas avanzadas que transformen la gestión agrícola mediante el uso de inteligencia de datos, permitiendo a las empresas alcanzar su máximo potencial de productividad y sostenibilidad.</p>
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Visión Empresarial">
     </section>
 
-    <!-- Funciones -->
-    <section id="funciones" class="container">
-        <h2 class="section-title">Características Principales</h2>
-        <div class="feature">
-            <div class="feature-card">
-                <h3>Automatización Financiera</h3>
-                <p>Genera reportes financieros detallados automáticamente y simplifica tu flujo de trabajo.</p>
-                <img src="https://via.placeholder.com/150" alt="Automatización">
-            </div>
-            <div class="feature-card">
-                <h3>Análisis Predictivo</h3>
-                <p>Anticipa resultados financieros con inteligencia artificial avanzada.</p>
-                <img src="https://via.placeholder.com/150" alt="Análisis Predictivo">
-            </div>
-            <div class="feature-card">
-                <h3>Integración IoT</h3>
-                <p>Conecta tus dispositivos para un monitoreo eficiente en tiempo real.</p>
-                <img src="https://via.placeholder.com/150" alt="IoT">
-            </div>
+    <!-- Misión -->
+    <section id="mision" class="container">
+        <h2 class="section-title">Nuestra Misión</h2>
+        <p>Desarrollar software que integre datos financieros y operacionales, facilitando decisiones informadas para una agricultura eficiente y rentable.</p>
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b6" alt="Trabajo en equipo">
+    </section>
+
+    <!-- Historia -->
+    <section id="historia" class="container">
+        <h2 class="section-title">Nuestra Historia</h2>
+        <p>Fundada en 202X, AGROEXO surgió como una respuesta innovadora para digitalizar y modernizar la gestión agrícola y financiera con soluciones tecnológicas avanzadas.</p>
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" alt="Historia de la empresa">
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="container">
+        <h2 class="section-title">Galería</h2>
+        <div class="image-gallery">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296" alt="Software Dashboard">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68" alt="Interfaz Inteligente">
+            <img src="https://images.unsplash.com/photo-1494173853739-c21f58b16055" alt="Análisis Predictivo">
         </div>
     </section>
 
-    <!-- Galería de Imágenes -->
-    <section class="image-gallery container">
-        <h2 class="section-title">Visualiza AGROEXO en Acción</h2>
-        <img src="https://via.placeholder.com/300" alt="Dashboard 1">
-        <img src="https://via.placeholder.com/300" alt="Dashboard 2">
-        <img src="https://via.placeholder.com/300" alt="Análisis">
+    <!-- Memes -->
+    <section id="memes" class="container">
+        <h2 class="section-title">Un Poco de Humor</h2>
+        <div class="meme">
+            <img src="https://i.imgflip.com/5qa0jx.jpg" alt="Meme financiero 1">
+            <img src="https://i.imgflip.com/5qa2md.jpg" alt="Meme financiero 2">
+        </div>
     </section>
 
-    <!-- Llamado a la acción -->
-    <section class="cta">
-        <h2>Comienza hoy mismo</h2>
-        <button>Solicita una Demo Gratis</button>
-    </section>
-
-    <!-- Contacto -->
-    <footer id="contacto">
+    <!-- Pie de página -->
+    <footer>
         <p>&copy; 2024 AGROEXO. Todos los derechos reservados.</p>
         <p>Contacto: info@agroexo.com | Tel: +52 55 1234 5678</p>
     </footer>
